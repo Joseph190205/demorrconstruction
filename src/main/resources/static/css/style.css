@@ -1,0 +1,124 @@
+/* GLOBAL*/
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #333;
+}
+
+/* NAVBAR*/
+.navbar {
+    background: linear-gradient(90deg, #1f4037, #99f2c8);
+    padding: 15px;
+}
+
+.navbar a {
+    color: white;
+    margin-right: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* ===== CONTENT ===== */
+.content {
+    padding: 40px;
+    text-align: center;
+}
+
+h1 {
+    color: #1f4037;
+    font-size: 36px;
+}
+
+h2 {
+    color: #1f4037;
+    margin-top: 30px;
+}
+
+/* FORMS */
+form {
+    background: white;
+    padding: 25px;
+    width: 420px;
+    margin: 30px auto;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+label {
+    font-weight: bold;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 6px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    height: 90px;
+}
+
+input[type="submit"] {
+    background: #1f4037;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 15px;
+    font-size: 16px;
+}
+
+input[type="submit"]:hover {
+    background: #145a32;
+}
+
+/* TABLE  */
+table {
+    border-collapse: collapse;
+    width: 90%;
+    margin: 30px auto;
+    background: white;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+table th {
+    background: #1f4037;
+    color: white;
+    padding: 12px;
+}
+
+table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background-color: #f1f1f1;
+}
+
+/*  BUTTON LINKS  */
+a {
+    color: #1f4037;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #0b5345;
+}
+
+/* FOOTER  */
+footer {
+    background: #1f4037;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}

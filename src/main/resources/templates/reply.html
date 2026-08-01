@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Reply</title>
+
+<link rel="stylesheet" th:href="@{/css/style.css}">
+</head>
+
+<body>
+
+<div class="navbar">
+    <a th:href="@{/viewContacts}">Back</a>
+</div>
+
+<h2 align="center">Reply to Customer</h2>
+
+<form th:action="@{/sendReply}" method="post">
+
+    <input type="hidden" name="id" th:value="${contact.id}">
+
+    <label>Email</label>
+    <input type="email" name="email" th:value="${contact.email}" readonly>
+
+    <label>Reply</label>
+    <textarea name="reply" required></textarea>
+
+    <input type="submit" value="Send Reply">
+
+</form>
+
+</body>
+</html>
