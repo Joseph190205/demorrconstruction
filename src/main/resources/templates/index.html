@@ -9,6 +9,8 @@
 
 <link rel="stylesheet" th:href="@{/css/style.css}">
 
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
 
 
@@ -23,25 +25,22 @@
 RR Construction
 </div>
 
-<div>
 
+<div>
 <a th:href="@{/}">Home</a>
 <a th:href="@{/contact}">Contact</a>
 <a th:href="@{/admin/login}">Admin</a>
-
 </div>
 
-</div>
 
+</div>
 
 
 
 <!-- HERO SECTION -->
 
+
 <section class="hero">
-
-
-<img src="/images/hero.jpg">
 
 
 <div class="hero-text">
@@ -52,12 +51,13 @@ Building Dreams With Quality & Trust
 
 
 <p>
-We create strong, modern and reliable buildings
-with professional construction solutions.
+RR Construction provides modern construction solutions,
+residential buildings, commercial projects and renovation
+services with professional quality.
 </p>
 
 
-<a href="/contact" class="btn">
+<a class="btn" th:href="@{/contact}">
 Get Quote
 </a>
 
@@ -65,8 +65,8 @@ Get Quote
 </div>
 
 
-</section>
 
+</section>
 
 
 
@@ -85,19 +85,14 @@ About RR Construction
 
 <p>
 
-RR Construction provides complete construction solutions
-including residential buildings, commercial projects,
-renovation and civil works.
-
-Our mission is to deliver high quality construction
-with safety, innovation and customer satisfaction.
+We are a trusted construction company delivering
+high quality building solutions. Our experienced team
+focuses on safety, innovation and customer satisfaction.
 
 </p>
 
 
 </section>
-
-
 
 
 
@@ -120,12 +115,11 @@ Our Services
 <div class="card">
 
 <h3>
-Residential Construction
+🏠 Residential Construction
 </h3>
 
 <p>
-Modern homes, villas and apartments designed
-according to customer requirements.
+Modern homes designed with strong structure and elegant finishing.
 </p>
 
 </div>
@@ -135,12 +129,11 @@ according to customer requirements.
 <div class="card">
 
 <h3>
-Commercial Buildings
+🏢 Commercial Buildings
 </h3>
 
 <p>
-Office buildings, shops and commercial
-spaces with professional execution.
+Office buildings, shops and industrial construction projects.
 </p>
 
 </div>
@@ -151,12 +144,11 @@ spaces with professional execution.
 <div class="card">
 
 <h3>
-Renovation Works
+🔨 Renovation Works
 </h3>
 
 <p>
-Transform old buildings into beautiful
-modern spaces.
+Complete renovation and improvement solutions.
 </p>
 
 </div>
@@ -167,78 +159,6 @@ modern spaces.
 
 
 </section>
-
-
-
-
-
-
-<!-- WHY CHOOSE -->
-
-
-<section class="choose">
-
-
-<h2>
-Why Choose Us?
-</h2>
-
-
-<div class="cards">
-
-
-<div class="card">
-
-<h3>
-Quality Work
-</h3>
-
-<p>
-Premium materials and skilled workers
-for long lasting structures.
-</p>
-
-</div>
-
-
-
-<div class="card">
-
-<h3>
-On Time Delivery
-</h3>
-
-<p>
-Proper planning and project management
-for timely completion.
-</p>
-
-</div>
-
-
-
-
-<div class="card">
-
-<h3>
-Safety First
-</h3>
-
-<p>
-Following safe construction practices
-at every project site.
-</p>
-
-</div>
-
-
-
-</div>
-
-
-</section>
-
-
 
 
 
@@ -258,17 +178,15 @@ Our Projects
 <div class="gallery">
 
 
-<img src="/images/building1.jpg">
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e">
 
-<img src="/images/building2.jpg">
+<img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5">
 
-<img src="/images/building3.jpg">
+<img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab">
 
-<img src="/images/interior.jpg">
+<img src="https://images.unsplash.com/photo-1590725140246-20acdee442be">
 
-<img src="/images/project1.jpg">
-
-<img src="/images/project2.jpg">
+<img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd">
 
 
 </div>
@@ -280,26 +198,31 @@ Our Projects
 
 
 
+<!-- WHY US -->
 
-<!-- CONTACT CTA -->
 
-
-<section class="contact-box">
+<section class="section why">
 
 
 <h2>
-Ready To Build Your Dream Project?
+Why Choose Us?
 </h2>
 
 
-<p>
-Contact RR Construction today for consultation.
-</p>
+<ul>
+
+<li>✔ Experienced Engineers</li>
+
+<li>✔ Quality Materials</li>
+
+<li>✔ On Time Delivery</li>
+
+<li>✔ Customer Satisfaction</li>
+
+<li>✔ Safety First Approach</li>
 
 
-<a href="/contact" class="btn">
-Contact Us
-</a>
+</ul>
 
 
 </section>
@@ -308,10 +231,13 @@ Contact Us
 
 
 
-
 <footer>
 
+
+<p>
 © 2026 RR Construction | All Rights Reserved
+</p>
+
 
 </footer>
 

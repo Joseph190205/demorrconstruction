@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html xmlns:th="http://www.thymeleaf.org">
+
 
 <head>
 
@@ -11,35 +13,92 @@
 
 </head>
 
+
 <body>
+
+
 
 <div class="navbar">
 
-<a th:href="@{/}">Home</a>
 
-<a th:href="@{/contact}">Contact</a>
+<div class="logo">
+RR Construction
+</div>
 
-<a th:href="@{/admin/login}">Admin Login</a>
+
+<div>
+
+<a th:href="@{/}">
+Home
+</a>
+
+
+<a th:href="@{/contact}">
+Contact
+</a>
+
 
 </div>
 
-<h2 align="center">Admin Login</h2>
+
+</div>
+
+
+
+
+<div class="login-box">
+
+
+<h2>
+Admin Login
+</h2>
+
+
 
 <form th:action="@{/admin/login}" method="post">
 
-<label>Username</label>
 
-<input type="text" name="username" required>
+<label>
+Username
+</label>
 
-<label>Password</label>
 
-<input type="password" name="password" required>
+<input type="text"
+name="username"
+placeholder="Enter username"
+required>
 
-<input type="submit" value="Login">
+
+
+<label>
+Password
+</label>
+
+
+<input type="password"
+name="password"
+placeholder="Enter password"
+required>
+
+
+
+<button>
+Login
+</button>
+
+
 
 </form>
 
-<p align="center" style="color:red" th:text="${error}"></p>
+
+
+<p class="error"
+th:text="${error}">
+</p>
+
+
+</div>
+
 
 </body>
 

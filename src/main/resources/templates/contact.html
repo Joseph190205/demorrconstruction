@@ -1,51 +1,135 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>Contact - RR Construction</title>
 
-    <link rel="stylesheet" th:href="@{/css/style.css}">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Contact RR Construction</title>
+
+<link rel="stylesheet" th:href="@{/css/style.css}">
+
 </head>
+
+
 <body>
 
-    <div class="navbar">
-        <a th:href="@{/}">Home</a>
-        <a th:href="@{/contact}">Contact</a>
-        <a th:href="@{/admin/login}">Admin Login</a>
-    </div>
 
-    <div class="content">
-        <h2>Contact Us</h2>
-        <p th:if="${success}"
-   th:text="${success}"
-   style="color:green; font-weight:bold; text-align:center;">
+<div class="navbar">
+
+<div class="logo">
+RR Construction
+</div>
+
+
+<div>
+
+<a th:href="@{/}">
+Home
+</a>
+
+<a th:href="@{/contact}">
+Contact
+</a>
+
+<a th:href="@{/admin/login}">
+Admin
+</a>
+
+
+</div>
+
+</div>
+
+
+
+
+<section class="contact-section">
+
+
+<h1>
+Contact Us
+</h1>
+
+
+<p>
+Tell us about your construction requirement.
+Our team will contact you soon.
 </p>
 
-        <form th:action="@{/saveContact}" th:object="${contact}" method="post">
 
-            <label>Name</label><br>
-            <input type="text" th:field="*{name}" placeholder="Enter your name" required>
-            <br><br>
 
-            <label>Email</label><br>
-            <input type="email" th:field="*{email}" placeholder="Enter your email" required>
-            <br><br>
+<p class="success"
+th:if="${success}"
+th:text="${success}">
+</p>
 
-            <label>Message</label><br>
-            <textarea th:field="*{message}" placeholder="Enter your message" required></textarea>
-            <br><br>
 
-            <input type="submit" value="Send Message">
 
-        </form>
-    </div>
 
-    <footer>
-        <hr>
-        <p style="text-align:center;">
-            © 2026 RR Construction | All Rights Reserved
-        </p>
-    </footer>
+<form th:action="@{/saveContact}"
+th:object="${contact}"
+method="post">
+
+
+
+<label>
+Name
+</label>
+
+<input type="text"
+th:field="*{name}"
+placeholder="Your Name"
+required>
+
+
+
+<label>
+Email
+</label>
+
+<input type="email"
+th:field="*{email}"
+placeholder="Your Email"
+required>
+
+
+
+<label>
+Message
+</label>
+
+
+<textarea
+th:field="*{message}"
+placeholder="Your Requirement"
+required>
+</textarea>
+
+
+
+<button>
+Send Message
+</button>
+
+
+
+</form>
+
+
+
+</section>
+
+
+
+<footer>
+
+© 2026 RR Construction
+
+</footer>
+
 
 </body>
+
 </html>
