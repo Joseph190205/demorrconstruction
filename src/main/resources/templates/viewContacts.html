@@ -5,67 +5,218 @@
 
 <meta charset="UTF-8">
 
-<title>View Contacts</title>
+<title>RR Construction | Admin Dashboard</title>
 
 <link rel="stylesheet" th:href="@{/css/style.css}">
 
 </head>
 
+
 <body>
 
-<div class="navbar">
 
-<a th:href="@{/}">Home</a>
+<!-- ADMIN NAVBAR -->
 
-<a th:href="@{/contact}">Contact</a>
+<div class="admin-navbar">
 
-<a th:href="@{/admin/login}">Admin Login</a>
 
-<a th:href="@{/logout}">Logout</a>
+<div class="logo">
+RR Construction Admin
 </div>
 
-<h2 align="center">Contact Messages</h2>
 
-<table border="1" align="center">
+<div>
+
+<a th:href="@{/}">
+Website
+</a>
+
+
+<a th:href="@{/admin/logout}">
+Logout
+</a>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+<!-- DASHBOARD CONTENT -->
+
+
+<div class="dashboard">
+
+
+<h1>
+Welcome Admin 👋
+</h1>
+
+
+<div class="stats-card">
+
+
+<h3>
+Total Customer Enquiries
+</h3>
+
+
+<h1 th:text="${#lists.size(contacts)}">
+0
+</h1>
+
+
+</div>
+
+
+
+
+
+<div class="table-box">
+
+
+<h2>
+Customer Messages
+</h2>
+
+
+
+<table>
+
 
 <tr>
 
 <th>ID</th>
-<th>Name</th>
+
+<th>Customer</th>
+
 <th>Email</th>
+
 <th>Message</th>
-<th>Reply</th>
-<th>Delete</th>
+
+<th>Status</th>
+
+<th>Actions</th>
 
 </tr>
+
+
 
 <tr th:each="contact : ${contacts}">
-    <td th:text="${contact.id}"></td>
-    <td th:text="${contact.name}"></td>
-    <td th:text="${contact.email}"></td>
-    <td th:text="${contact.message}"></td>
 
-    <td>
-    <a th:if="${contact.reply == null or #strings.isEmpty(contact.reply)}"
-       th:href="@{/reply/{id}(id=${contact.id})}"
-       style="background:#007bff;color:white;padding:6px 12px;text-decoration:none;border-radius:5px;">
-        Reply
-    </a>
 
-    <span th:if="${contact.reply != null and !#strings.isEmpty(contact.reply)}"
-          style="background:green;color:white;padding:6px 12px;border-radius:5px;">
-        ✓ Done
-    </span>
+<td th:text="${contact.id}">
 </td>
 
-    <td>
-        <a th:href="@{/delete/{id}(id=${contact.id})}">
-            Delete
-        </a>
-    </td>
+
+
+<td>
+
+<div class="customer-name"
+th:text="${contact.name}">
+</div>
+
+</td>
+
+
+
+
+<td th:text="${contact.email}">
+</td>
+
+
+
+
+
+<td class="msg"
+th:text="${contact.message}">
+</td>
+
+
+
+
+
+
+<td>
+
+
+<span class="pending-status"
+th:if="${contact.reply == null or #strings.isEmpty(contact.reply)}">
+
+Pending Reply
+
+</span>
+
+
+
+<span class="done-status"
+th:if="${contact.reply != null and !#strings.isEmpty(contact.reply)}">
+
+✓ Replied
+
+</span>
+
+
+</td>
+
+
+
+
+
+
+<td>
+
+
+<a class="reply-button"
+
+th:if="${contact.reply == null or #strings.isEmpty(contact.reply)}"
+
+th:href="@{/reply/{id}(id=${contact.id})}">
+
+Reply
+
+</a>
+
+
+
+<a class="delete-button"
+
+th:href="@{/delete/{id}(id=${contact.id})}">
+
+Delete
+
+</a>
+
+
+
+</td>
+
+
+
 </tr>
 
+
 </table>
+
+
+</div>
+
+
+</div>
+
+
+
+
+<footer>
+
+© 2026 RR Construction | Admin Panel
+
+</footer>
+
 
 </body>
 
