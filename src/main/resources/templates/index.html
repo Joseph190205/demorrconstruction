@@ -1,24 +1,210 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-<head>
-    <meta charset="UTF-8">
-    <title>RR Construction</title>
 
-    <link rel="stylesheet" th:href="@{/css/style.css}">
+<head>
+
+<meta charset="UTF-8">
+
+<title>RR Construction</title>
+
+<link rel="stylesheet" th:href="@{/css/style.css}">
+
 </head>
+
 
 <body>
 
+
+<!-- NAVBAR -->
+
 <div class="navbar">
-    <a th:href="@{/}">Home</a>
-    <a th:href="@{/contact}">Contact</a>
-    <a th:href="@{/admin/login}">Admin Login</a>
+
+    <div class="logo">
+        RR Construction
+    </div>
+
+    <div>
+        <a th:href="@{/}">Home</a>
+        <a th:href="@{/contact}">Contact</a>
+        <a th:href="@{/admin/login}">Admin Login</a>
+    </div>
+
 </div>
 
-<div class="content">
-    <h1>Welcome to RR Construction</h1>
-    <p>We build strong, safe and reliable buildings.</p>
+
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+
+<div class="hero-text">
+
+<h1>
+Building Dreams With Quality & Trust
+</h1>
+
+<p>
+RR Construction provides reliable construction solutions
+with modern technology, skilled workers and excellent quality.
+</p>
+
+
+<a th:href="@{/contact}" class="btn">
+Get Quote
+</a>
+
+
 </div>
+
+
+
+<div class="hero-image">
+
+<img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e"
+alt="Construction">
+
+</div>
+
+
+</section>
+
+
+
+
+
+<!-- ABOUT -->
+
+<section class="section">
+
+
+<h2>
+About RR Construction
+</h2>
+
+
+<p>
+RR Construction is a professional construction company
+specialized in residential buildings, commercial projects,
+renovation and infrastructure development.
+
+We focus on quality materials, safety standards and
+customer satisfaction.
+</p>
+
+
+</section>
+
+
+
+
+
+<!-- SERVICES -->
+
+
+<section class="services">
+
+
+<h2>
+Our Services
+</h2>
+
+
+<div class="cards">
+
+
+<div class="card">
+
+<h3>🏠 Residential Construction</h3>
+
+<p>
+Modern homes designed with strong structure,
+beautiful architecture and long durability.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h3>🏢 Commercial Buildings</h3>
+
+<p>
+Office buildings, shops and commercial spaces
+built with professional standards.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>🔨 Renovation Works</h3>
+
+<p>
+Complete renovation and remodeling solutions
+for old buildings.
+</p>
+
+</div>
+
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+<!-- WHY US -->
+
+
+<section class="why">
+
+
+<h2>
+Why Choose RR Construction?
+</h2>
+
+
+<ul>
+
+<li>✔ High quality construction materials</li>
+
+<li>✔ Experienced engineers and workers</li>
+
+<li>✔ On-time project completion</li>
+
+<li>✔ Affordable and transparent pricing</li>
+
+<li>✔ Customer focused service</li>
+
+
+</ul>
+
+
+</section>
+
+
+
+
+
+<footer>
+
+<p>
+© 2026 RR Construction | All Rights Reserved
+</p>
+
+</footer>
+
+
 
 </body>
+
 </html>

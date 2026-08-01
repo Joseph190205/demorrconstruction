@@ -6,6 +6,7 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Service;
 
+
 @Service
 public class MailService {
 
@@ -15,7 +16,8 @@ public class MailService {
     @Value("${spring.mail.username}")
     private String fromEmail;
 
-    public void sendMail(String to, String subject, String text) {
+
+    public void sendMail(String to,String subject,String text){
 
         SimpleMailMessage message = new SimpleMailMessage();
 
